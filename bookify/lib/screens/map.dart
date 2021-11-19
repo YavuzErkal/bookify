@@ -11,9 +11,22 @@ class _MapState extends State<Map> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
-        child: Text("Map"),
-      ),
+      child: Row(
+        children: [
+          Container(
+            width: MediaQuery.of(context).size.width * 0.5,
+            height: MediaQuery.of(context).size.height * 0.5,
+            decoration: BoxDecoration(
+              color: Colors.red,
+              image: DecorationImage(
+                image: AssetImage("assets/images/plan.jpeg"),
+
+              ),
+            ),
+          ),
+          Text("Test")
+        ],
+      )
     );
   }
 }

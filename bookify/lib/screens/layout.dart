@@ -13,7 +13,7 @@ class Layout extends StatefulWidget {
 
 class _LayoutState extends State<Layout> {
 
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
 
   List<Widget> _children = <Widget>[
     Map(),
