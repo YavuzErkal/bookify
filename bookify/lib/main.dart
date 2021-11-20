@@ -8,7 +8,7 @@ Future<Null> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
-  var cameras = await availableCameras();
+  var cameras/* = await availableCameras()*/;
 
 
   runApp(MyApp(cameras: cameras));
@@ -32,7 +32,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.blueGrey.shade500,
+        primaryColor: Colors.blueGrey.shade500,
+        primaryColorLight: Colors.blueGrey.shade400,
       ),
       home: Login(cameras: cameras,),
     );
