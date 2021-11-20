@@ -34,7 +34,7 @@ class _FullBookingState extends State<FullBooking>{
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left:15.0,right: 15.0,top:15,bottom: 0),
+                      padding: const EdgeInsets.only(left:15.0,right: 15.0,top:5,bottom: 0),
                       //padding: EdgeInsets.symmetric(horizontal: 15),
                       child: TextField(
                         decoration: InputDecoration(
@@ -43,7 +43,112 @@ class _FullBookingState extends State<FullBooking>{
                             hintText: 'Enter your place ID'),
                       ),
                     ),
-
+                    Container(
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Expanded(
+                            //Symbol one
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: Center(
+                                child: Container(
+                                  //container for logo
+                                    width: 50,
+                                    height: 50,
+                                    child: Icon(
+                                        Icons.desktop_windows,
+                                      ),
+                                    ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            //Symbol one
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: Center(
+                                child: Container(
+                                  //container for logo
+                                  width: 50,
+                                  height: 50,
+                                  child: Icon(
+                                    Icons.phone,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            //Symbol one
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: Center(
+                                child: Container(
+                                  //container for logo
+                                  width: 50,
+                                  height: 50,
+                                  child: Icon(
+                                    Icons.power,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            //Symbol one
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: Center(
+                                child: Container(
+                                  //container for logo
+                                  width: 50,
+                                  height: 50,
+                                  child: Icon(
+                                    Icons.outdoor_grill_rounded,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            //Symbol one
+                            child: Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: Center(
+                                child: Container(
+                                  //container for logo
+                                  width: 50,
+                                  height: 50,
+                                  child: Icon(
+                                    Icons.cake,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left:15.0,right: 15.0,top:35,bottom: 0),
+                        child: Text(
+                          "Time Details",
+                          style: TextStyle(fontSize: 30.0),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left:15.0,right: 15.0,top:15,bottom: 0),
+                      //padding: EdgeInsets.symmetric(horizontal: 15),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Date',
+                            hintText: 'Enter your booking date'),
+                      ),
+                    ),
                     Container(
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
@@ -55,7 +160,7 @@ class _FullBookingState extends State<FullBooking>{
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: 'Starting Time',
-                                hintText: 'Enter your desired starting time'),
+                                hintText: 'Enter your starting time'),
                           ),
                         ),
                         ),
@@ -74,7 +179,7 @@ class _FullBookingState extends State<FullBooking>{
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Ending Time',
-                                  hintText: 'Enter your desired ending time'),
+                                  hintText: 'Enter your ending time'),
                             ),
                           ),
                         ),
@@ -84,7 +189,30 @@ class _FullBookingState extends State<FullBooking>{
                   ],
                 )
             ),
-            //Place ID
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 35, bottom: 15),
+              child:Container(
+                height: 150,
+                width: 350,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20)),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      elevation: 50,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(500))),
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Booking successfull')));
+                    Navigator.pop(
+                        context, MaterialPageRoute(builder: (_) => Layout()));
+                  },
+                  child: Text(
+                    'BOOK',
+                    style: TextStyle( fontSize: 25),
+                  ),
+                ),
+              ),
+            ),
           ],
         )
       ),

@@ -34,7 +34,7 @@ class _LoginState extends State<Login> {
                     /*decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(50.0)),*/
-                    child: Image.asset('asset/images/flutter-logo.png')),
+                    child: Image.asset('assets/logo.jpg')),
               ),
             ),
             Padding(
@@ -72,12 +72,15 @@ class _LoginState extends State<Login> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20)),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      elevation: 50,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(500))),
                   onPressed: () {
                     Navigator.pushReplacement(
                         context, MaterialPageRoute(builder: (_) => Layout(cameras: widget.cameras,)));
                   },
                   child: Text(
-                    'Login',
+                    'LOGIN',
                     style: TextStyle( fontSize: 25),
                   ),
                 ),

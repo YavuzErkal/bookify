@@ -53,6 +53,7 @@ flutter:
      - assets/images/plan.jpeg
      - assets/images/Grundriss.svg
      - assets/images/Grundriss.jpeg
+     - assets/logo.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
