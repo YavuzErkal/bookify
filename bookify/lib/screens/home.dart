@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:bookify/widgets/main_card.dart';
 import 'package:flutter/material.dart';
 
