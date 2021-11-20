@@ -68,7 +68,7 @@ class _LayoutState extends State<Layout> {
           child: Icon(Icons.add),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (_) => FullBooking()));
+                context, MaterialPageRoute(builder: (_) => FullBooking(name: "O4-R1-P5",)));
           }),
     );
   }

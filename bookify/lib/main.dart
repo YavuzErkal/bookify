@@ -8,7 +8,7 @@ Future<Null> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
-  var cameras/* = await availableCameras()*/;
+  var cameras = await availableCameras();
 
 
   runApp(MyApp(cameras: cameras));

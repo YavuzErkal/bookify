@@ -3,9 +3,11 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 
 class MainCard extends StatefulWidget {
   final void Function(String name) parentAction;
-  const MainCard({Key key, this.name, this.parentAction}) : super(key: key);
+  const MainCard({Key key, this.name, this.date, this.parentAction}) : super(key: key);
 
   final name;
+
+  final date;
 
   @override
   _MainCardState createState() => _MainCardState();
@@ -35,8 +37,8 @@ class _MainCardState extends State<MainCard> {
         child: Column(
           children: [
             ListTile(
-              title: Text("Platz: " + widget.name),
-              subtitle: Text("Gebucht am 10.11.21 von: 8:00 - 18:00"),
+              title: Text("Workplace: " + widget.name),
+              subtitle: Text("Booked at " + widget.date + ", 8:00 - 18:00"),
             ),
           ],
         ),

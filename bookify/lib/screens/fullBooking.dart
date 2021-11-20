@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'layout.dart';
+
 class FullBooking extends StatefulWidget{
   const FullBooking({Key key, this.name}) : super(key: key);
 
@@ -10,6 +12,23 @@ class FullBooking extends StatefulWidget{
 }
 
 class _FullBookingState extends State<FullBooking>{
+
+  var txt = TextEditingController();
+  var txt2 = TextEditingController();
+  var txt3 = TextEditingController();
+  var txt4 = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+
+    txt.text = widget.name;
+    txt2.text = TimeOfDay.now().hour.toString() + ":" + TimeOfDay.now().minute.toString();
+    //txt2.text = "8:00";
+    txt3.text = "17:00";
+    txt4.text = "21.11.2021";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,10 +56,12 @@ class _FullBookingState extends State<FullBooking>{
                       padding: const EdgeInsets.only(left:15.0,right: 15.0,top:5,bottom: 0),
                       //padding: EdgeInsets.symmetric(horizontal: 15),
                       child: TextField(
+                        controller: txt,
                         decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: 'Place ID',
-                            hintText: 'Enter your place ID'),
+                            //hintText: 'Enter your place ID'
+                            ),
                       ),
                     ),
                     Container(
@@ -74,6 +95,7 @@ class _FullBookingState extends State<FullBooking>{
                                   height: 50,
                                   child: Icon(
                                     Icons.phone,
+                                    color: Colors.grey.shade300,
                                   ),
                                 ),
                               ),
@@ -143,6 +165,7 @@ class _FullBookingState extends State<FullBooking>{
                       padding: const EdgeInsets.only(left:15.0,right: 15.0,top:15,bottom: 0),
                       //padding: EdgeInsets.symmetric(horizontal: 15),
                       child: TextField(
+                        controller: txt4,
                         decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             labelText: 'Date',
@@ -157,6 +180,13 @@ class _FullBookingState extends State<FullBooking>{
                         child: Padding(
                           padding: const EdgeInsets.only(left:15.0,right: 15.0,top:15,bottom: 0),
                           child: TextField(
+                            onTap: () async {
+                              var date = await showTimePicker(context: context,initialTime: TimeOfDay.now(),);
+                              setState(() {
+                                txt2.text = date.hour.toString() + ":" + date.minute.toString();
+                              });
+                            },
+                            controller: txt2,
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(),
                                 labelText: 'Starting Time',
@@ -176,6 +206,13 @@ class _FullBookingState extends State<FullBooking>{
                           child: Padding(
                             padding: const EdgeInsets.only(left:15.0,right: 15.0,top:15,bottom: 0),
                             child: TextField(
+                              onTap: () async {
+                                var date = await showTimePicker(context: context, initialTime: TimeOfDay.now());
+                                setState(() {
+                                  txt3.text = date.hour.toString() + ":" + date.minute.toString();
+                                });
+                              },
+                              controller: txt3,
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Ending Time',
@@ -207,7 +244,7 @@ class _FullBookingState extends State<FullBooking>{
                         context, MaterialPageRoute(builder: (_) => Layout()));
                   },
                   child: Text(
-                    'BOOK',
+                    'ClickBookGo!',
                     style: TextStyle( fontSize: 25),
                   ),
                 ),

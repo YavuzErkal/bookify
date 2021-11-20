@@ -40,14 +40,14 @@ class _MapState extends State<Map> {
                   Row(
                     children: [
                       Container(width: MediaQuery.of(context).size.width * 0.07,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P1")));}, child: Text("P1")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P1")));}, child: Text("P1")),
                       Container(width: MediaQuery.of(context).size.width * 0.05,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P2")));}, child: Text("P2")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P2")));}, child: Text("P2")),
 
                       Container(width: MediaQuery.of(context).size.width * 0.265,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P4")));}, child: Text("P1")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P3")));}, child: Text("P3")),
                       Container(width: MediaQuery.of(context).size.width * 0.05,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P5")));}, child: Text("P2")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P4")));}, child: Text("P4")),
                     ],
                   ),
                   Container(
@@ -57,14 +57,14 @@ class _MapState extends State<Map> {
                   Row(
                     children: [
                       Container(width: MediaQuery.of(context).size.width * 0.07,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P6")));}, child: Text("P1")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P5")));}, child: Text("P5")),
                       Container(width: MediaQuery.of(context).size.width * 0.05,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P7")));}, child: Text("P2")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P6")));}, child: Text("P6")),
 
                       Container(width: MediaQuery.of(context).size.width * 0.265,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P8")));}, child: Text("P1")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P7")));}, child: Text("P7")),
                       Container(width: MediaQuery.of(context).size.width * 0.05,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P9")));}, child: Text("P2")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P8")));}, child: Text("P8")),
                     ],
                   ),
                   Container(
@@ -74,9 +74,9 @@ class _MapState extends State<Map> {
                   Row(
                     children: [
                       Container(width: MediaQuery.of(context).size.width * 0.61,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P10")));}, child: Text("P1")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P9")));}, child: Text("P9")),
                       Container(width: MediaQuery.of(context).size.width * 0.05,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P11")));}, child: Text("P2")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P10")));}, child: Text("P10")),
                     ],
                   ),
                   Container(
@@ -86,9 +86,9 @@ class _MapState extends State<Map> {
                   Row(
                     children: [
                       Container(width: MediaQuery.of(context).size.width * 0.61,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P12")));}, child: Text("P1")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P11")));}, child: Text("P11")),
                       Container(width: MediaQuery.of(context).size.width * 0.05,),
-                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "P13")));}, child: Text("P2")),
+                      ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P12")));}, child: Text("P12")),
                     ],
                   ),
                 ],
