@@ -1,3 +1,4 @@
+import 'package:bookify/screens/fullBooking.dart';
 import 'package:flutter/material.dart';
 
 import 'dummy.dart';
@@ -55,7 +56,8 @@ class _LayoutState extends State<Layout> {
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: () {
-
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => FullBooking()));
           }),
     );
   }
