@@ -42,7 +42,7 @@ class _LayoutState extends State<Layout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bookify"),
+        title: Text("ClickBookGo"),
       ),
       body: _children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
