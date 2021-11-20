@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'layout.dart';
-
 class FullBooking extends StatefulWidget{
+  const FullBooking({Key key, this.name}) : super(key: key);
+
+  final name;
+
   @override
   _FullBookingState createState() => _FullBookingState();
 }
