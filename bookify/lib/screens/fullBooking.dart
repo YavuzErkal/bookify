@@ -201,8 +201,8 @@ class _FullBookingState extends State<FullBooking>{
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(500))),
                   onPressed: () {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Booking successfull')));
-                    Navigator.pushReplacement(
-                        context, MaterialPageRoute(builder: (_) => Layout())); //Hier passenden Link einfügen
+                    Navigator.pop(
+                        context, MaterialPageRoute(builder: (_) => Layout()));
                   },
                   child: Text(
                     'BOOK',
