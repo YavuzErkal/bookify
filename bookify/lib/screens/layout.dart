@@ -1,11 +1,14 @@
+import 'package:bookify/screens/cam.dart';
 import 'package:flutter/material.dart';
+import 'package:camera/camera.dart';
 
-import 'dummy.dart';
 import 'home.dart';
 import 'map.dart';
 
 class Layout extends StatefulWidget {
-  const Layout({Key key}) : super(key: key);
+  const Layout({Key key, this.cameras}) : super(key: key);
+
+  final List<CameraDescription> cameras;
 
   @override
   _LayoutState createState() => _LayoutState();
@@ -15,16 +18,24 @@ class _LayoutState extends State<Layout> {
 
   int _selectedIndex = 1;
 
-  List<Widget> _children = <Widget>[
-    Map(),
-    Home(),
-    Dummy(),
-  ];
+  List<Widget> _children;
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+  }
+
+  @override
+  void initState() {
+
+    super.initState();
+
+    _children = <Widget>[
+    Map(),
+    Home(),
+    CamScreen(cameras: widget.cameras),
+    ];
   }
 
   @override

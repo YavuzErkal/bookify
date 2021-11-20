@@ -1,11 +1,22 @@
 import 'package:bookify/screens/layout.dart';
 import 'package:flutter/material.dart';
+import 'package:camera/camera.dart';
+import 'package:flutter/foundation.dart';
+import 'dart:async';
 
-void main() {
-  runApp(MyApp());
+Future<Null> main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  var cameras = await availableCameras();
+
+
+  runApp(MyApp(cameras: cameras));
 }
 
 class MyApp extends StatelessWidget {
+  final List<CameraDescription> cameras;
+  const MyApp({Key key, this.cameras}) : super(key: key);
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -23,7 +34,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Layout(),
+      home: Layout(cameras: cameras,),
     );
   }
 }
