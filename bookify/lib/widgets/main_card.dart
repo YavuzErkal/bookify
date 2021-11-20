@@ -9,47 +9,24 @@ class MainCard extends StatefulWidget {
 }
 
 class _MainCardState extends State<MainCard> {
+
+  String name;
+  TimeOfDay time;
+
+
   @override
   Widget build(BuildContext context) {
     return Slidable(
-      startActionPane: ActionPane(
-        motion: const ScrollMotion(),
-        children: const [
+      endActionPane: const ActionPane(
+        motion: ScrollMotion(),
+        children: [
           SlidableAction(
             onPressed: doNothing,
             backgroundColor: Color(0xFFFE4A49),
             foregroundColor: Colors.white,
             icon: Icons.delete,
             label: 'Delete',
-          ),
-          SlidableAction(
-            onPressed: doNothing,
-            backgroundColor: Color(0xFF21B7CA),
-            foregroundColor: Colors.white,
-            icon: Icons.share,
-            label: 'Share',
-          ),
-        ],
-      ),
-
-      endActionPane: const ActionPane(
-        motion: ScrollMotion(),
-        children: [
-          SlidableAction(
-            flex: 2,
-            onPressed: doNothing,
-            backgroundColor: Color(0xFF7BC043),
-            foregroundColor: Colors.white,
-            icon: Icons.archive,
-            label: 'Archive',
-          ),
-          SlidableAction(
-            onPressed: doNothing,
-            backgroundColor: Color(0xFF0392CF),
-            foregroundColor: Colors.white,
-            icon: Icons.save,
-            label: 'Save',
-          ),
+          )
         ],
       ),
       child: Card(
@@ -68,7 +45,8 @@ class _MainCardState extends State<MainCard> {
   }
 }
 
+void doNothing(BuildContext context) {
 
 
-void doNothing(BuildContext context) {}
 
+}
