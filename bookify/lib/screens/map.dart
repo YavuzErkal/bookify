@@ -15,7 +15,7 @@ class _MapState extends State<Map> {
         child: Column(
           children: [
             Container(
-              width: MediaQuery.of(context).size.width * 0.9,
+              width: MediaQuery.of(context).size.width * 0.95,
               height: MediaQuery.of(context).size.height * 0.8,
               decoration: BoxDecoration(
                 image: DecorationImage(

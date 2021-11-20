@@ -1,3 +1,6 @@
+import 'dart:html';
+
+import 'package:bookify/widgets/main_card.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -11,9 +14,17 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
-        child: Text("Home"),
-      ),
+      padding: const EdgeInsets.all(8),
+      child: ListView(
+        children: [
+          MainCard(),
+          MainCard(),
+          MainCard(),
+          MainCard(),
+          MainCard(),
+          MainCard()
+        ],
+      )
     );
   }
 }
