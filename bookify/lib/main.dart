@@ -8,7 +8,7 @@ Future<Null> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
-  var cameras = await availableCameras();
+  var cameras /*= await availableCameras()*/;
 
 
   runApp(MyApp(cameras: cameras));
@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ClickBookGo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is teriahe theme of your application.
         //
