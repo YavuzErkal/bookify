@@ -89,7 +89,7 @@ class _MapState extends State<Map> {
                     Row(
                       children: [
                         Container(width: MediaQuery.of(context).size.width * 0.17,),
-                        ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-M1")));}, child: Text("M1")),
+                        ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-M1", parentAction: widget.parentAction,)));}, child: Text("M1")),
                     ],
                     ),
                   Container(
