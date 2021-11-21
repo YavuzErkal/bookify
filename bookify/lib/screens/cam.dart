@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 
 class CamScreen extends StatefulWidget {
-  const CamScreen({Key key, this.cameras}) : super(key: key);
+  const CamScreen({Key key, this.cameras, this.parentAction}) : super(key: key);
+
+  final void Function() parentAction;
 
   final List<CameraDescription> cameras;
 
@@ -26,6 +28,12 @@ class _CamScreenState extends State<CamScreen> {
   void initState() {
     super.initState();
     initCamera(selectedCamera);
+
+    Future.delayed(const Duration(milliseconds: 5000), () {
+
+      widget.parentAction();
+
+    });
   }
 
   @override

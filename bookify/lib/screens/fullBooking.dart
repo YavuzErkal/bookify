@@ -227,31 +227,34 @@ class _FullBookingState extends State<FullBooking>{
                   ],
                 )
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                  left: 15.0, right: 15.0, top: 35, bottom: 15),
-              child:Container(
-                height: 150,
-                width: 350,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20)),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      elevation: 50,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(500))),
-                  onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Booking successfull')));
-                    widget.parentAction(txt.text, txt4.text, txt2.text, txt3.text);
-                    Navigator.pop(
-                        context);
-                  },
-                  child: Text(
-                    'ClickBookGo!',
-                    style: TextStyle( fontSize: 25),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 15.0, right: 15.0, top: 35, bottom: 15),
+                child:Container(
+                  height: 150,
+                  width: 350,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20)),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        elevation: 50,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(500))),
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Booking successfull')));
+                      widget.parentAction(txt.text, txt4.text, txt2.text, txt3.text);
+                      Navigator.pop(
+                          context);
+                    },
+                    child: Text(
+                      'ClickBookGo!',
+                      style: TextStyle( fontSize: 25),
+                    ),
                   ),
                 ),
               ),
-            ),
+            )
           ],
         )
       ),

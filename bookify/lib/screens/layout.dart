@@ -37,6 +37,12 @@ class _LayoutState extends State<Layout> {
     });
   }
 
+  void timer() {
+    _selectedIndex = 1;
+    Navigator.push(
+        context, MaterialPageRoute(builder: (_) => FullBooking(name: "O4-R1-P7", parentAction: addElementMap,)));
+  }
+
   @override
   void initState() {
 
@@ -45,7 +51,7 @@ class _LayoutState extends State<Layout> {
     _children = <Widget>[
     Map(parentAction: addElementMap,),
     Home(controller: myController,),
-    CamScreen(cameras: widget.cameras),
+    CamScreen(cameras: widget.cameras, parentAction: timer,),
     ];
   }
 
