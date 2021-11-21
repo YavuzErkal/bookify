@@ -79,12 +79,26 @@ class _MapState extends State<Map> {
                       ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P10")));}, child: Text("P10")),
                     ],
                   ),
+
+                      Container(
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      height: MediaQuery.of(context).size.height * 0.065,
+                    ),
+                    Row(
+                      children: [
+                        Container(width: MediaQuery.of(context).size.width * 0.17,),
+                        ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-M1")));}, child: Text("M1")),
+                    ],
+                    ),
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.95,
-                    height: MediaQuery.of(context).size.height * 0.12,
+                    width: MediaQuery.of(context).size.width * 0.1,
+                    height: MediaQuery.of(context).size.height * 0.019,
                   ),
-                  Row(
+                      Row(
                     children: [
+
+                      //Container(width: MediaQuery.of(context).size.width * 0.1,),
+                      //ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P11")));}, child: Text("M11")),
                       Container(width: MediaQuery.of(context).size.width * 0.61,),
                       ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (_) => FullBooking(name: "O2-R15-P11")));}, child: Text("P11")),
                       Container(width: MediaQuery.of(context).size.width * 0.05,),
