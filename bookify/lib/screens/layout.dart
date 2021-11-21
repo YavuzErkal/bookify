@@ -21,6 +21,16 @@ class _LayoutState extends State<Layout> {
 
   List<Widget> _children;
 
+  final HomePageController myController = HomePageController();
+
+  void addElement(String name, String date, String startTime, String endTime) {
+    myController.addElement(name, date, startTime, endTime);
+  }
+
+  void addElementMap(String name, String date, String startTime, String endTime) {
+    myController.addElementd(name, date, startTime, endTime);
+  }
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -33,8 +43,8 @@ class _LayoutState extends State<Layout> {
     super.initState();
 
     _children = <Widget>[
-    Map(),
-    Home(),
+    Map(parentAction: addElementMap,),
+    Home(controller: myController,),
     CamScreen(cameras: widget.cameras),
     ];
   }
@@ -45,7 +55,11 @@ class _LayoutState extends State<Layout> {
       appBar: AppBar(
         title: Text("ClickBookGo"),
       ),
-      body: _children[_selectedIndex],
+      body: /*IndexedStack(
+        children: _children,
+        index: _selectedIndex,
+      ),*/
+      _children[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -68,7 +82,7 @@ class _LayoutState extends State<Layout> {
           child: Icon(Icons.add),
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (_) => FullBooking(name: "O4-R1-P5",)));
+                context, MaterialPageRoute(builder: (_) => FullBooking(name: "O4-R1-P5", parentAction: addElement,)));
           }),
     );
   }

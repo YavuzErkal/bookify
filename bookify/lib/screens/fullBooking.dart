@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 import 'layout.dart';
 
 class FullBooking extends StatefulWidget{
-  const FullBooking({Key key, this.name}) : super(key: key);
+  const FullBooking({Key key, this.name, this.parentAction}) : super(key: key);
 
   final name;
+  final void Function(String name, String date, String startTime, String endTimes) parentAction;
 
   @override
   _FullBookingState createState() => _FullBookingState();
@@ -36,7 +37,7 @@ class _FullBookingState extends State<FullBooking>{
         title: Text("ClickBookGo"),
       ),
       body: Container(
-        child: Column(
+        child: ListView(
           children: [
             Container(  //Name Row
                 margin: const EdgeInsets.only(top: 32),
@@ -240,8 +241,9 @@ class _FullBookingState extends State<FullBooking>{
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(500))),
                   onPressed: () {
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Booking successfull')));
+                    widget.parentAction(txt.text, txt4.text, txt2.text, txt3.text);
                     Navigator.pop(
-                        context, MaterialPageRoute(builder: (_) => Layout()));
+                        context);
                   },
                   child: Text(
                     'ClickBookGo!',
