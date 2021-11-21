@@ -85,7 +85,9 @@ class _LayoutState extends State<Layout> {
         onTap: _onItemTapped,
       ),
       floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
+          child: Icon(
+            Icons.event_available,
+          ),
           onPressed: () {
             Navigator.push(
                 context, MaterialPageRoute(builder: (_) => FullBooking(name: "O4-R1-P5", parentAction: addElement,)));
